@@ -5,33 +5,39 @@ const first = document.getElementById("first");
 const second = document.getElementById("second");
 const startBtn = document.querySelector("start-btn");
 var startingMinutes;
-
-longPomodoro.addEventListener("click", function() {
-            startingMinutes = 50;
-            let time = startingMinutes * 60;
-
-            //switch to timer window 
-            first.style.display = "none";
-            second.style.display = "inline";
-
-            setInterval(updateCountdown, 1000);
+var time = startingMinutes * 60;
 
 
-            shortPomodoro.addEventListener("click", function() {
-                startingMinutes = 25;
-                let time = startingMinutes * 60;
 
-                //switch to timer window 
-                first.style.display = "none";
-                second.style.display = "inline";
-                setInterval(updateCountdown, 1000);
-            })
+longPomodoro.addEventListener("click", function(time) {
+    startingMinutes = 50;
 
-            function updateCountdown(time) {
-                const minutes = Math.floor(time / 60);
-                var seconds = time % 60;
-                seconds = seconds < 10 ? '0' + seconds : seconds;
-                pmdrTimer.innerHTML = `${minutes}:${seconds}`;
-                time--;
-                console.log("workingggggg")
-            }
+    //switch to timer window 
+    first.style.display = "none";
+    second.style.display = "inline";
+    console.log(time);
+
+
+    setInterval(updateCountdown(time), 1000);
+})
+
+function updateCountdown(time) {
+    var minutes = Math.floor(time / 60);
+    var seconds = time % 60;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+    pmdrTimer.innerHTML = `${minutes}:${seconds}`;
+    time--;
+    console.log("workingggggg")
+}
+
+
+
+
+shortPomodoro.addEventListener("click", function() {
+    startingMinutes = 25;
+
+    //switch to timer window 
+    first.style.display = "none";
+    second.style.display = "inline";
+    setInterval(updateCountdown, 1000);
+})
