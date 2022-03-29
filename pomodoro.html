@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro</title>
-    <link rel="stylesheet" href="pomodoro.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pomodoro</title>
+        <link rel="stylesheet" href="pomodoro.css">
+    </head>
 
-<body>
-    <div class="pmdr-modal">
+    <body>
+        <div class="pmdr-modal">
 
-        <div class="pmdr-header">
-            <h2>Pomodoro Timer <span class="pmdr-info">🍎</span></h2>
-            <div class="pmdr-goal">
-                <label for="pmdr-goal">Enter Pomodoro Goal for the session : </label>
-                <input type="text" name="pmdr-cycles" id="pmdr-cycles">
+            <div class="pmdr-header">
+                <h2>Pomodoro Timer <span class="pmdr-info">🍎</span></h2>
+                <div class="pmdr-goal">
+                    <label for="pmdr-goal">Enter Pomodoro Goal for the session : </label>
+                    <input type="text" name="pmdr-cycles" id="pmdr-cycles">
+                </div>
             </div>
-        </div>
 
-        <div id="first" class="first">
-            <div class="pmdr-body set-timer ">
-                <button class="long-pmdr"> Start a 50 mins timer with 10 mins break</button>
-                <button class="short-pmdr"> Start a 25 mins timer with 5 mins break</button>
-            </div>
-            <!-- <div class="pmdr-footer ">
+            <div id="first" class="first">
+                <div class="pmdr-body set-timer ">
+                    <button class="long-pmdr"> Start a 50 mins timer with 10 mins break</button>
+                    <button class="short-pmdr"> Start a 25 mins timer with 5 mins break</button>
+                </div>
+                <!-- <div class="pmdr-footer ">
                 <button class="start-btn ">Start Focusing</button>
             </div> -->
+            </div>
+
+            <div id="second" class="secondary">
+                <div class="pmdr-body ongoing-timer ">
+                    00:00
+
+                    <!-- here is a bug it shows 00:00 for 1 sec and then strts working for particular time working is gd only UI error -->
+                </div>
+                <div class="pmdr-footer ">
+                    <button class="reset-btn ">RESET</button>
+                    <button class="pause-btn ">PAUSE</button>
+                    <button class="resume-btn hide-btn">RESUME</button>
+                </div>
+            </div>
         </div>
 
-        <div id="second" class="secondary">
-            <div class="pmdr-body ongoing-timer ">
-                45:19
-            </div>
-            <div class="pmdr-footer ">
-                <button class="reset-btn ">RESET</button>
-                <button class="pause-btn ">PAUSE</button>
-                <button class="resume-btn hide-btn">RESUME</button>
-            </div>
-        </div>
-    </div>
 
 
 
-
-</body>
-<script src="pomodoro.js"></script>
+    </body>
+    <script src="pomodoro.js"></script>
 
 </html>
