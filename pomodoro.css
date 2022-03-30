@@ -74,6 +74,7 @@ button:focus {
     color: rgb(78, 124, 124);
     border-radius: 7px;
     margin-top: 15px;
+    /* transform: scale(0); */
 }
 
 .pmdr-goal input:focus {
@@ -125,6 +126,8 @@ button:focus {
 
 .resume-btn {
     background-color: rgb(166, 255, 225);
+    /* hide resume button initially display when paused */
+    display: none;
 }
 
 .reset-btn {
@@ -132,7 +135,12 @@ button:focus {
 }
 
 .pause-btn {
-    background-color: rgb(255, 179, 255);
+    background-color: rgb(247, 255, 134);
+}
+
+.break-btn {
+    background-color: rgb(179, 244, 255);
+    display: none;
 }
 
 .ongoing-timer {

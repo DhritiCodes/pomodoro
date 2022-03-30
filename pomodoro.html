@@ -16,7 +16,7 @@
             <h2>Pomodoro Timer <span class="pmdr-info">🍎</span></h2>
             <div class="pmdr-goal">
                 <label for="pmdr-goal">Enter Pomodoro Goal for the session : </label>
-                <input type="text" name="pmdr-cycles" id="pmdr-cycles">
+                <input type="text" name="pmdr-goal" id="pmdr-goal">
             </div>
         </div>
 
@@ -32,21 +32,19 @@
 
         <div id="second" class="secondary">
             <div class="pmdr-body ongoing-timer ">
+                00:00
+                <!-- here is a bug it shows 00:00 for 1 sec and then strts working for particular time working is gd only UI error -->
             </div>
-
-            <div id="second" class="secondary">
-                <div class="pmdr-body ongoing-timer ">
-                    00:00
-
-                    <!-- here is a bug it shows 00:00 for 1 sec and then strts working for particular time working is gd only UI error -->
-                </div>
-                <div class="pmdr-footer ">
-                    <button class="reset-btn ">RESET</button>
-                    <button class="pause-btn ">PAUSE</button>
-                    <button class="resume-btn hide-btn">RESUME</button>
-                </div>
+            <div class="pmdr-footer ">
+                <button class="reset-btn ">RESET</button>
+                <!-- display focus session or break session is going on -->
+                <button class="finish-btn ">FINISH</button>
+                <button class="break-btn ">START BREAK</button>
+                <button class="pause-btn ">PAUSE</button>
+                <button class="resume-btn ">RESUME</button>
             </div>
         </div>
+
 
 
 
