@@ -1,0 +1,36 @@
+// 50 min pomodoro
+// longPomodoro.addEventListener('click', function() {
+//     startingMinutes = 50;
+//     time = startingMinutes * 60;
+
+//     //switch to timer window
+//     first.style.display = 'none';
+//     second.style.display = 'inline'; 
+
+//     //pause button should be displayed at first -  not resume button 
+//     resume.style.display = "none"
+//     pause.style.display = "inline";
+//     console.log(time);
+
+//     //finish button should be displayed first, not start break button
+//     finish.style.display = "inline";
+//     breakBtn.style.display = "none";
+
+//     timerInterval = setInterval(() => {
+//         const minutes = Math.floor(time / 60);
+//         let seconds = time % 60;
+//         seconds = seconds < 10 ? '0' + seconds : seconds;
+//         pmdrTimer.innerHTML = `${minutes}:${seconds}`;
+//         time--;
+//         //stop when timer ends
+//         if (time < 0) {
+//             clearInterval(timerInterval);
+//             //ADD FINISHING EFFECTS + AUDIO
+
+
+//             return;
+//         }
+//         // console.log(time);
+//         //CHANGE 40 => 1000 I.E. 
+//     }, 1000);
+// })
